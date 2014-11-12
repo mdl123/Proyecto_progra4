@@ -1,19 +1,46 @@
+
+#Doctores_section
+{
+	margin-left:50px;
+   margin-top:55px;
+    margin-bottom:130px;
+    width:  90%;
+      width: 700px;
+       height: 620px;
+	background:white;
+	padding: 10px;
+	box-shadow: black 0px 0px 10px;
+	border-radius: 10px;
+}
+
 button{
   height: 25px;
 }
 
 #agregar_doctores_button{
   margin-top: 2%;
-  margin-left: 32%;
+  margin-left: 35%;
 }
 
-#atras_button{
-  margin-top: 35%;
-  margin-left: 2%
-  
-}
+
 
 #eliminar_doctores_button{
-  margin-top: 35%;
-  margin-left: 78%
+  margin-top:  2%;
+  margin-left: 35%
+}
+
+
+#fr2 {
+     width: 250px;
+   clear: both;
+  margin:auto; 
+}
+
+#fr2 input {
+        width: 100%;
+        clear: both;
+  margin:auto; 
+}
+h4{
+  text-align: center;
 }

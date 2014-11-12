@@ -12,10 +12,19 @@
 <body>
 <section id="Especialidades_section">
 <h1 >Especialidades</h1>
-<button type="button" id="agregar_especialidades_button"><B>+</B></button>
 <br />
 <br />
 <form id="fr">
+<h4>Agregar Especialidades</h4>
+<label>Nombre:</label>
+<input type="text" name="NombreEspecialidad">
+<br></br>
+<label>Descripción:<label>
+<input type="textarea" name="Descripcion">
+<button type="button" id="agregar_especialidades_button"><B>Agregar</B></button>
+</form>
+<h4>Eliminar Especialidades</h4>
+<form id="fr2">
 <input type="text" list="especialidades"  />
 <datalist id="especialidades">
   <option value="Internet Explorer">
@@ -24,10 +33,8 @@
   <option value="Opera">
   <option value="Safari">
 </datalist> 
-</form>
-<button type="button" id="atras_button"><B>Atrás</B></button>
 <button type="button" id="eliminar_especialidades_button"><B>Eliminar</B></button>
-
+</form>
 </section>
 
 </body>

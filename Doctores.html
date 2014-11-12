@@ -12,10 +12,36 @@
 <body>
 <section id="Doctores_section">
 <h1 >Doctores</h1>
-<button type="button" id="agregar_doctores_button"><B>+</B></button>
 <br />
 <br />
 <form id="fr">
+<h4>Agregar Doctores</h4>
+<label>Número de Identidad:</label>
+<input type="text" name="Id_Doctor">
+<br></br>
+<label>Nombre:<label>
+<input type="textarea" name="NombreDoctor">
+<br></br>
+<label>Apellido:<label>
+<input type="textarea" name="ApellidoDoctor">
+<br></br>
+<label>Seleccione una especialidad</label>
+<input type="text" list="especialidades"  />
+
+<datalist id="especialidades">
+  <option value="Internet Explorer">
+  <option value="Firefox">
+  <option value="Chrome">
+  <option value="Opera">
+  <option value="Safari">
+</datalist> 
+<br></br>
+<label>Cel:<label>
+<input type="textarea" name="CelDoctor">
+<button type="button" id="agregar_doctores_button"><B>Agregar</B></button>
+</form>
+<form id="fr2">
+<h4>Eliminar Doctores</h4>
 <input type="text" list="doctores"/>
 <datalist id="doctores">
   <option value="Internet Explorer">
@@ -24,9 +50,8 @@
   <option value="Opera">
   <option value="Safari">
 </datalist> 
-</form>
-<button type="button" id="atras_button"><B>Atrás</B></button>
 <button type="button" id="eliminar_doctores_button"><B>Eliminar</B></button>
+</form>
 
 </section>
 

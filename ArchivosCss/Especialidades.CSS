@@ -4,18 +4,28 @@ button{
 
 #agregar_especialidades_button{
   margin-top: 2%;
-  margin-left: 32%;
+  margin-left: 35%;
 }
 
-#atras_button{
-  margin-top: 35%;
-  margin-left: 2%
-  
-}
+
 
 #eliminar_especialidades_button{
-  margin-top: 35%;
-  margin-left: 78%
+  margin-top:  2%;
+  margin-left: 35%
 }
 
 
+#fr2 {
+     width: 250px;
+   clear: both;
+  margin:auto; 
+}
+
+#fr2 input {
+        width: 100%;
+        clear: both;
+  margin:auto; 
+}
+h4{
+  text-align: center;
+}

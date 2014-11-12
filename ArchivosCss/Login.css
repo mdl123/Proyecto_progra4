@@ -7,11 +7,14 @@ margin: 0 auto;
 
 }
 
-h1{
-font-family: Verdana, Geneva, sans-serif;
-font-size: 200%;
-margin-bottom:100px;
+h1{font-family: 'Helvetica Neue',Helvetica, sans-serif;
+line-height: 1em;
+color: #737373;
+font-weight:bold;
+font-size: 40px;
+text-shadow:0px 0px 0 rgb(-38,-38,-38),1px 1px 0 rgb(-67,-67,-67),2px 2px 0 rgb(-95,-95,-95),3px 3px 0 rgb(-123,-123,-123),4px 4px 0 rgb(-152,-152,-152),5px 5px 0 rgb(-180,-180,-180),6px 6px 0 rgb(-208,-208,-208),7px 7px 0 rgb(-237,-237,-237),8px 8px 0 rgb(-265,-265,-265), 9px 9px 0 rgb(-293,-293,-293),10px 10px 9px rgba(0,0,0,0),10px 10px 1px rgba(0,0,0,0.5),0px 0px 9px rgba(0,0,0,.2);margin-bottom:100px;
 margin-left:450px;
+font-style:italic;
 }
 
 

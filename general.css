@@ -1,0 +1,32 @@
+#upper_left {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#upper_right {
+	position: absolute;
+	top: 0;
+	right: 0%;
+}
+
+
+
+#fr {
+        width: 250px;
+        clear: both;
+	margin:auto; 
+    }
+#fr input {
+        width: 100%;
+        clear: both;
+	margin:auto; 
+}
+
+
+label{
+
+font-family: "Times New Roman", Times, serif;
+font-size: 14px;
+
+}

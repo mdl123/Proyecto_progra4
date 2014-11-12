@@ -2,7 +2,7 @@ button{
   height: 25px;
 }
 
-#agregar_especialidades_button{
+#agregar_doctores_button{
   margin-top: 2%;
   margin-left: 32%;
 }
@@ -13,9 +13,7 @@ button{
   
 }
 
-#eliminar_especialidades_button{
+#eliminar_doctores_button{
   margin-top: 35%;
   margin-left: 78%
 }
-
-

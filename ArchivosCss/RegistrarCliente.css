@@ -12,20 +12,6 @@
 	border-radius: 10px;
 }
 
-h1{
-margin-left:250px;
-
-}
-
-body{
-background-image: url("imagenes/back.jpg");
-background-repeat: no-repeat;
-background-size: cover;
-width: 60%;
-margin: 0 auto;
-
-}
-
 #RegistrarCliente_button{
 margin-top:30px;
 margin-left:80px; 

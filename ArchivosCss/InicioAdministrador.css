@@ -12,29 +12,12 @@
 	border-radius: 10px;
 }
 
-
-
-
-body{
-background-image: url("imagenes/back.jpg");
-background-repeat: no-repeat;
-background-size: cover;
-width: 60%;
-margin: 0 auto;
-}
-
-
-
 nav ul li
 {
   display: inline-black;
   padding: 10px 15px;
   cursor: pointer;
   color: white; 
-}
-
-#h1{
-  text-align: center;
 }
 
 nav ul li a

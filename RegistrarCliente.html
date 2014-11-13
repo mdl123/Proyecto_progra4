@@ -1,6 +1,7 @@
-<!DOCTYPE HTML>
+﻿<!DOCTYPE HTML>
 <html>
-<title>The Health Book</title>
+<script src="validaciones_RegistroCliente.js"></script>
+<title>Creación de cuenta</title>
 <meta charset="utf-8" />
 <link rel="stylesheet" type="text/css" href="ArchivosCss/general.css">
 <link rel="stylesheet" type="text/css" href="ArchivosCss/RegistrarCliente.css">
@@ -9,12 +10,12 @@
 <img id="upper_right" src="ArchivosCss/imagenes/hospital.png" />
 <body>
 <section id="RegistrarCliente_section">
-<h1>Registro de Cuenta</h1>
+<h1>Creación de Cuenta</h1>
 <br></br>
 <div>
-<form id="fr">
+<form id="fr" name="fr1">
 <label>Número de Identidad:</label>
-<input type="text" name="IdCliente">
+<input type="text" name="IdCliente id="IdCliente">
 <br></br>
 <label>Nombre:<label>
 <input type="text" name="NombreUsuario">
@@ -32,7 +33,7 @@
 <input type="text" name="NomUsuario">
 <label>Contraseña:<label>
 <input type="password" name="conUsuario">
-<button type="button" id="RegistrarCliente_button"> Registrarse </button>
+<button type="button" id="RegistrarCliente_button" onclick="validar(fr)"> Registrarse </button>
 </form>
 </div>
 </section>

@@ -6,7 +6,7 @@
     margin-bottom:130px;
     width:  90%;
       width: 700px;
-       height: 620px;
+       height: 550px;
 	background:white;
 	padding: 10px;
 	box-shadow: black 0px 0px 10px;
@@ -18,14 +18,14 @@ button{
 }
 
 #agregar_doctores_button{
-  margin-top: 2%;
+  margin-top: 10px;
   margin-left: 35%;
 }
 
 
 
 #eliminar_doctores_button{
-  margin-top:  2%;
+  margin-top:  10px;
   margin-left: 35%
 }
 
@@ -40,7 +40,4 @@ button{
         width: 100%;
         clear: both;
   margin:auto; 
-}
-h4{
-  text-align: center;
 }

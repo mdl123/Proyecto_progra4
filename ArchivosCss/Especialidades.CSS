@@ -3,14 +3,14 @@ button{
 }
 
 #agregar_especialidades_button{
-  margin-top: 2%;
+  margin-top: 10px;
   margin-left: 35%;
 }
 
 
 
 #eliminar_especialidades_button{
-  margin-top:  2%;
+  margin-top:  10px;
   margin-left: 35%
 }
 
@@ -25,7 +25,4 @@ button{
         width: 100%;
         clear: both;
   margin:auto; 
-}
-h4{
-  text-align: center;
 }

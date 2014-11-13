@@ -43,14 +43,22 @@ margin: 0 auto;
   margin:auto; 
 }
 
+h4{
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+}
+
 
 h1{
   text-align: center;
+  font-family: "Times New Roman", Times, serif;
+}
+
+button{
+  font-family: "Times New Roman", Times, serif;
 }
 
 label{
-
 font-family: "Times New Roman", Times, serif;
 font-size: 14px;
-
 }

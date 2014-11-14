@@ -1,9 +1,7 @@
 #back{
 background-image: url("imagenes/login.jpg");
 background-repeat: no-repeat;
-background-size: cover;
-width: 60%;
-margin: 0 auto;
+
 
 }
 
@@ -13,7 +11,7 @@ color: #7a7a7a;
 font-weight:bold;
 font-size: 45px;
 text-shadow:0px 0px 0 rgb(86,86,86),1px 1px 0 rgb(60,60,60),2px 2px 0 rgb(34,34,34), 3px 3px 0 rgb(8,8,8),4px 4px 3px rgba(0,0,0,0.25),4px 4px 1px rgba(0,0,0,0.5),0px 0px 3px rgba(0,0,0,.2);
-margin-bottom:100px;
+margin-bottom: 100px;
 margin-left:450px;
 font-style:italic;
 }

@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<header>
+		<script src="ArchivosCss/Validaciones.js"></script>
 		<title>The Health Book</title>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" type="text/css" href="ArchivosCss/general.css">
@@ -13,7 +14,7 @@
 			<br />
 			<form id="fr">
 				<label>Seleccione un doctor</label>
-				<input type="text" list="doctores"  />
+				<input type="text" id="doctoresCitaUs" list="doctores"  />
 				<datalist id="doctores">
 				  <option value="Internet Explorer">
 				  <option value="Firefox">
@@ -23,7 +24,7 @@
 				</datalist>
 				<br></br>
 				<label>Seleccione una fecha<label>
-				<input type="text" list="fechas"  />
+				<input type="text" id="fechasCitasUs" list="fechas"  />
 				<datalist id="fechas">
 				  <option value="Internet Explorer">
 				  <option value="Firefox">
@@ -33,7 +34,7 @@
 				</datalist>
 				<br></br>
 				<label>Seleccione una hora<label>
-				<input type="text" list="horas"  />
+				<input type="text" id="horasCitasUs" list="horas"  />
 				<datalist id="horas">
 				  <option value="Internet Explorer">
 				  <option value="Firefox">
@@ -41,7 +42,7 @@
 				  <option value="Opera">
 				  <option value="Safari">
 				</datalist> 
-				<button type="button" id="cancelar_citas_button"><B>Cancelar</B></button>
+				<button type="button" id="cancelar_citas_button" onclick="validarCitasUsuario()"><B>Cancelar</B></button>
 			</form>
 		</section>
 

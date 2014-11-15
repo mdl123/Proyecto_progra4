@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE HTML>
 <html>
 	<header>
+		<script src="ArchivosCss/Validaciones.js"></script>
 		<title>The Health Book</title>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" type="text/css" href="ArchivosCss/general.css">
@@ -13,14 +14,14 @@
 			<form id="fr">
 				<h4>Agregar Especialidades</h4>
 				<label>Nombre:</label>
-				<input type="text" name="NombreEspecialidad">
+				<input type="text" id="NombreEspecialidadUs">
 				<br></br>
 				<label>Descripción:<label>
-				<input type="textarea" name="Descripcion">
-				<button type="button" id="agregar_especialidades_button"><B>Agregar</B></button>
+				<input type="text" id="DescripcionUs">
+				<button type="button" id="agregar_especialidades_button" onclick="validarEspecialidadesUsuario()"><B>Agregar</B></button>
 		        <h4>Eliminar Especialidades</h4>
 			
-				<input type="text" list="especialidades"  />
+				<input type="text" id="especialidadesUs" list="especialidades"  />
 				<datalist id="especialidades">
 				  <option value="Internet Explorer">
 				  <option value="Firefox">
@@ -28,7 +29,7 @@
 				  <option value="Opera">
 				  <option value="Safari">
 				</datalist> 
-				<button type="button" id="eliminar_especialidades_button"><B>Eliminar</B></button>
+				<button type="button" id="eliminar_especialidades_button" onclick="validarEliminarEspecialidadesUsuario()"><B>Eliminar</B></button>
 			</form>
 		</section>
 

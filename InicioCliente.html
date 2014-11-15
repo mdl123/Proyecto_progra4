@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<header>
+		<script src="ArchivosCss/Validaciones.js"></script>
 		<title>The Health Book</title>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" type="text/css" href="ArchivosCss/general.css">
@@ -13,7 +14,7 @@
 			<form id="fr">
 				<h4>Reservar Citas</h4>
 				<label>Seleccione una especialidad</label>
-				<input type="text" list="especialidades"  />
+				<input type="text" id="especialidadesCl" list="especialidades"  />
 
 				<datalist id="especialidades">
 				  <option value="Internet Explorer">
@@ -24,7 +25,7 @@
 				</datalist> 
 
 				<label>Seleccione un doctor</label>
-				<input type="text" list="doctor"  />
+				<input type="text" id="doctorCl" list="doctor"  />
 
 				<datalist id="doctor">
 				  <option value="Internet Explorer">
@@ -36,7 +37,7 @@
 
 
 				<label>Seleccione una fecha</label>
-				<input type="text" list="fecha"  />
+				<input type="text" id="fechaCl" list="fecha"  />
 
 				<datalist id="fecha">
 				  <option value="Internet Explorer">
@@ -46,10 +47,10 @@
 				  <option value="Safari">
 				</datalist> 
 
-				<button type="button" id="reservarcitas_button"><B>Reservar Cita</B></button>
+				<button type="button" id="reservarcitas_button" onclick="validarReservarCitasCliente()"><B>Reservar Cita</B></button>
 				<h4>Cancelar Citas</h4>
 				<label>Seleccione una fecha</label>
-				<input type="text" list="cita"  />
+				<input type="text" id="fechacitaCl" list="cita"  />
 
 				<datalist id="cita">
 				  <option value="Internet Explorer">
@@ -59,7 +60,7 @@
 				  <option value="Safari">
 				</datalist> 
 
-				<button type="button" id="cancelarcitas_button"><B>Cancelar Cita</B></button>
+				<button type="button" id="cancelarcitas_button" onclick="validarCancelarCitasCliente()"><B>Cancelar Cita</B></button>
 
 			</form>
 

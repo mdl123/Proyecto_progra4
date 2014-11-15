@@ -1,6 +1,6 @@
 ﻿
-//hecho por Michael
 function validar(){
+
 var ret="";
 	ret += validarNumId()+"\n";
 	ret += validarNombreApellido()+"\n";
@@ -10,6 +10,7 @@ var ret="";
 	ret += validarCorreo()+"\n";
 	ret += validarUserName()+"\n";
 	ret += validarPassword()+"\n";
+
 	if(ret){
 		alert(ret);
 	}//fin del if
@@ -27,6 +28,7 @@ var num=document.forms[0].elements[0];
 
 var ret="";
 var cont=0;
+
 var HayError=false;
 console.log(num.value);
 
@@ -66,6 +68,7 @@ var temp=nombre;
 var mensaje="Nombre";
 var ret="";
 var cont=0;
+
 	for(var i=0;i<=1;i++){
 	if(temp.value==""){
 		ret+="El campo "+mensaje+ ", no puede esta vacio"+"\n";

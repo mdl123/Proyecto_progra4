@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE HTML>
 <html>
 	<header>
-		<script src="ArchivosCss/validaciones_RegistroCliente.js"></script>
+		<script src="ArchivosCss/Validaciones.js"></script>
 		<title>Creación de cuenta</title>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" type="text/css" href="ArchivosCss/general.css">
@@ -15,25 +15,25 @@
 		<br></br>
 			<form id="fr" name="fr1">
 				<label>Número de Identidad:</label>
-				<input type="text" name="IdCliente id="IdCliente">
+				<input type="text" id="IdCliente" onkeypress="return entradaNumeros(event)" onpaste="return false">
 				<br></br>
 				<label>Nombre:<label>
-				<input type="text" name="NombreUsuario">
+				<input type="text" id="NombreUsuario" onkeypress="return entradaLetras(event)" onpaste="return false">
 				<label>Apellido:</label>
-				<input type="text" name="ApellidoUsuario">
+				<input type="text" id="ApellidoUsuario" onkeypress="return entradaLetras(event)" onpaste="return false">
 				<label>Dirreción:</label>
-				<input type="text" name="DirUsuario">
+				<input type="text" id="DirUsuario">
 				<label>Edad:</label>
-				<input type="text" name="EdadUsuario">
+				<input type="text" id="EdadUsuario" onkeypress="return entradaNumeros(event)" onpaste="return false">
 				<label>Teléfono:</label>
-				<input type="text" name="TelUsuario">
+				<input type="text" id="TelUsuario" onkeypress="return entradaNumeros(event)" onpaste="return false">
 				<label>Correo electrónico:</label>
-				<input type="text" name="CorreoUsuario">
+				<input type="text" id="CorreoUsuario" >
 				<label>Nombre de Usuario:</label>
-				<input type="text" name="NomUsuario">
+				<input type="text" id="NomUsuario" onkeypress="return entradaCombinada(event)" onpaste="return false">
 				<label>Contraseña:<label>
-				<input type="password" name="conUsuario">
-				<button type="button" id="RegistrarCliente_button" onclick="validar(fr)"><B>Registrarse</B></button>
+				<input type="password" id="conUsuario" onkeypress="return entradaCombinada(event)" onpaste="return false">
+				<button type="button" id="RegistrarCliente_button" onclick="validarRegistroCliente(fr)"><B>Registrarse</B></button>
 			</form>
 		</section>
 		

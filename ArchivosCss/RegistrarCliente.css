@@ -1,18 +1,4 @@
 #RegistrarCliente_section
 {
-	margin-left:50px;
-   margin-top:55px;
-    margin-bottom:130px;
-    width:  90%;
-      width: 700px;
-       height: 550px;
-	background:white;
-	padding: 10px;
-	box-shadow: black 0px 0px 10px;
-	border-radius: 10px;
-}
-
-#RegistrarCliente_button{
-margin-top:30px;
-margin-left:80px; 
+    height: 550px;
 }

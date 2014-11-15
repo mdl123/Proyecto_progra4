@@ -1,71 +1,70 @@
- <!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html>
-<title>The Health Book</title>
-<meta charset="utf-8" />
-<link rel="stylesheet" type="text/css" href="ArchivosCss/general.css">
-<link rel="stylesheet" type="text/css" href="ArchivosCss/InicioCliente.css">
+	<header>
+		<title>The Health Book</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="ArchivosCss/general.css">
+	</header>
 
-<body>
-<section id="InicioCliente_section">
-<h1 >Control de Citas</h1>
-<form id="fr">
-<h4>Reservar Citas</h4>
-<label>Seleccione una especialidad</label>
-<input type="text" list="especialidades"  />
+	<body>
+		<br /><br /><br /><br />
+		<section id="InicioCliente_section">
+			<h1 >Control de Citas</h1>
+			<form id="fr">
+				<h4>Reservar Citas</h4>
+				<label>Seleccione una especialidad</label>
+				<input type="text" list="especialidades"  />
 
-<datalist id="especialidades">
-  <option value="Internet Explorer">
-  <option value="Firefox">
-  <option value="Chrome">
-  <option value="Opera">
-  <option value="Safari">
-</datalist> 
+				<datalist id="especialidades">
+				  <option value="Internet Explorer">
+				  <option value="Firefox">
+				  <option value="Chrome">
+				  <option value="Opera">
+				  <option value="Safari">
+				</datalist> 
 
-<label>Seleccione un doctor</label>
-<input type="text" list="doctor"  />
+				<label>Seleccione un doctor</label>
+				<input type="text" list="doctor"  />
 
-<datalist id="doctor">
-  <option value="Internet Explorer">
-  <option value="Firefox">
-  <option value="Chrome">
-  <option value="Opera">
-  <option value="Safari">
-</datalist> 
+				<datalist id="doctor">
+				  <option value="Internet Explorer">
+				  <option value="Firefox">
+				  <option value="Chrome">
+				  <option value="Opera">
+				  <option value="Safari">
+				</datalist> 
 
 
-<label>Seleccione una fecha</label>
-<input type="text" list="fecha"  />
+				<label>Seleccione una fecha</label>
+				<input type="text" list="fecha"  />
 
-<datalist id="fecha">
-  <option value="Internet Explorer">
-  <option value="Firefox">
-  <option value="Chrome">
-  <option value="Opera">
-  <option value="Safari">
-</datalist> 
+				<datalist id="fecha">
+				  <option value="Internet Explorer">
+				  <option value="Firefox">
+				  <option value="Chrome">
+				  <option value="Opera">
+				  <option value="Safari">
+				</datalist> 
 
-<button type="button" id="InicioCliente_button">Reservar Cita</button>
-</form>
+				<button type="button" id="reservarcitas_button"><B>Reservar Cita</B></button>
+				<h4>Cancelar Citas</h4>
+				<label>Seleccione una fecha</label>
+				<input type="text" list="cita"  />
 
-<form id="fr2">
-<h4>Cancelar Citas</h4>
-<label>Seleccione una fecha</label>
-<input type="text" list="cita"  />
+				<datalist id="cita">
+				  <option value="Internet Explorer">
+				  <option value="Firefox">
+				  <option value="Chrome">
+				  <option value="Opera">
+				  <option value="Safari">
+				</datalist> 
 
-<datalist id="cita">
-  <option value="Internet Explorer">
-  <option value="Firefox">
-  <option value="Chrome">
-  <option value="Opera">
-  <option value="Safari">
-</datalist> 
+				<button type="button" id="cancelarcitas_button"><B>Cancelar Cita</B></button>
 
-<button type="button" id="InicioCliente_button">Cancelar Cita</button>
+			</form>
 
-</form>
+		</section>
 
-</section>
-
-</body>
+	</body>
 
 </html>

@@ -1,36 +1,37 @@
 ﻿<!DOCTYPE HTML>
 <html>
-<title>The Health Book</title>
-<meta charset="utf-8" />
-<link rel="stylesheet" type="text/css" href="ArchivosCss/general.css">
-<link rel="stylesheet" type="text/css" href="ArchivosCss/Especialidades.css">
+	<header>
+		<title>The Health Book</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="ArchivosCss/general.css">
+	</header>
 
-<body>
-<section id="Especialidades_section">
-<h1 >Especialidades</h1>
-<form id="fr">
-<h4>Agregar Especialidades</h4>
-<label>Nombre:</label>
-<input type="text" name="NombreEspecialidad">
-<br></br>
-<label>Descripción:<label>
-<input type="textarea" name="Descripcion">
-<button type="button" id="agregar_especialidades_button"><B>Agregar</B></button>
-</form>
-<h4>Eliminar Especialidades</h4>
-<form id="fr2">
-<input type="text" list="especialidades"  />
-<datalist id="especialidades">
-  <option value="Internet Explorer">
-  <option value="Firefox">
-  <option value="Chrome">
-  <option value="Opera">
-  <option value="Safari">
-</datalist> 
-<button type="button" id="eliminar_especialidades_button"><B>Eliminar</B></button>
-</form>
-</section>
+	<body>
+		<br /><br /><br /><br />
+		<section id="Especialidades_section">
+			<h1 >Especialidades</h1>
+			<form id="fr">
+				<h4>Agregar Especialidades</h4>
+				<label>Nombre:</label>
+				<input type="text" name="NombreEspecialidad">
+				<br></br>
+				<label>Descripción:<label>
+				<input type="textarea" name="Descripcion">
+				<button type="button" id="agregar_especialidades_button"><B>Agregar</B></button>
+		        <h4>Eliminar Especialidades</h4>
+			
+				<input type="text" list="especialidades"  />
+				<datalist id="especialidades">
+				  <option value="Internet Explorer">
+				  <option value="Firefox">
+				  <option value="Chrome">
+				  <option value="Opera">
+				  <option value="Safari">
+				</datalist> 
+				<button type="button" id="eliminar_especialidades_button"><B>Eliminar</B></button>
+			</form>
+		</section>
 
-</body>
+	</body>
 
 </html>

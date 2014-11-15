@@ -1,43 +1,6 @@
-
-#Doctores_section
-{
-	margin-left:50px;
-   margin-top:55px;
-    margin-bottom:130px;
-    width:  90%;
-      width: 700px;
-       height: 550px;
-	background:white;
-	padding: 10px;
-	box-shadow: black 0px 0px 10px;
-	border-radius: 10px;
-}
-
-button{
-  height: 25px;
-}
-
-#agregar_doctores_button{
-  margin-top: 10px;
-  margin-left: 35%;
+#Doctores_section{
+	height: 530px;
 }
 
 
 
-#eliminar_doctores_button{
-  margin-top:  10px;
-  margin-left: 35%
-}
-
-
-#fr2 {
-     width: 250px;
-   clear: both;
-  margin:auto; 
-}
-
-#fr2 input {
-        width: 100%;
-        clear: both;
-  margin:auto; 
-}

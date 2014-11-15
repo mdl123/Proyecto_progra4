@@ -1,53 +1,44 @@
 #back{
-background-image: url("imagenes/login.jpg");
-background-repeat: no-repeat;
-
-
+	background-image: url("imagenes/login.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: 0 auto;
 }
 
-h1{font-family: 'Helvetica Neue',Helvetica, sans-serif;
-line-height: 1em;
-color: #7a7a7a;
-font-weight:bold;
-font-size: 45px;
-text-shadow:0px 0px 0 rgb(86,86,86),1px 1px 0 rgb(60,60,60),2px 2px 0 rgb(34,34,34), 3px 3px 0 rgb(8,8,8),4px 4px 3px rgba(0,0,0,0.25),4px 4px 1px rgba(0,0,0,0.5),0px 0px 3px rgba(0,0,0,.2);
-margin-bottom: 100px;
-margin-left:450px;
-font-style:italic;
+h1{
+	font-family: 'Helvetica Neue',Helvetica, sans-serif;
+	line-height: 1em;
+	color: #7a7a7a;
+	font-weight:bold;
+	font-size: xx-large;
+	margin-left:35%;
+	font-style:italic;
 }
 
+#login_section{
 
-
-
-#login_section
-{
-	margin-left:500px;
-   margin-top:0px;
-    margin-bottom:50px;
-    width:  90%;
-      width: 300px;
-       height: 200px;
+	width: 25%;
+    height: 200px;
 	background: lightblue;
 	padding: 10px;
 	box-shadow: black 0px 0px 10px;
-border-radius: 10px;
- opacity: 1.0;
+	border-radius: 10px;
+	opacity: 1.0;
+	margin-right:20%;
     filter: alpha(opacity=100); /* For IE8 and earlier */
 }
-
-
-
+ 
 #login_button{
-margin-top:50px;
-margin-left:100px; 
+	margin-top:25%;
+	margin-left:70%; 
 }
 
 label{
-font-family: "Times New Roman", Times, serif;
-font-size: 14px;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 14px;
 }
 
 button{
-  font-family: "Times New Roman", Times, serif;
+	font-family: "Times New Roman", Times, serif;
 }
 

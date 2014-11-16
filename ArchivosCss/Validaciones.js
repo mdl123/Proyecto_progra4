@@ -206,7 +206,6 @@ function validarCorreo(){
 	var ret="";
 	var textoEntrada = correo.value;
 	var HayError=true;
-	alert(textoEntrada);
 	if((textoEntrada.match(RegExPattern)) && (textoEntrada.value != "")){
 		ret+="El campo Correo Electrónico contiene información inválida"+"\n";
 		HayError=false;	

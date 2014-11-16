@@ -202,18 +202,17 @@ function validarTelefono(campo){
 
 function validarCorreo(){
 	var correo=document.getElementById("CorreoUsuario");
+	var textoEntrada = correo.value;
+	var RegExPattern = /[\w-\.]{3,}@([\w-]{2,}\.)*([\w-]{2,}\.)[\w-]{2,4}/;
 	var ret="";
 	var HayError=false;
-	var cont=0;
-	if(correo.value.indexOf("@")==-1||correo.value.indexOf(".")==-1){
+	if((textoEntrada.match(RegExPattern)) && (textoEntrada.value != "")){
 		ret+="El campo Correo Electrónico contiene información inválida"+"\n";
 		HayError=true;
 	}//fin del if
 	if(HayError==true){
 		 correo.style.background = 'Red';
-	}else{
-		correo.style.background = 'white'
-	}
+	}//fin del if
 	return ret;
 
 }//fin de la funcion

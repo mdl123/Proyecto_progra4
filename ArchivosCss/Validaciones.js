@@ -205,11 +205,13 @@ function validarCorreo(){
 	var RegExPattern = /[\w-\.]{3,}@([\w-]{2,}\.)*([\w-]{2,}\.)[\w-]{2,4}/;
 	var ret="";
 	var textoEntrada = correo.value;
-	var HayError=true;
-	if((textoEntrada.match(RegExPattern)) && (textoEntrada.value != "")){
-		ret+="El campo Correo Electrónico contiene información inválida"+"\n";
-		HayError=false;	
-	}//fin del if
+	var HayError=false;
+	if((textoEntrada.match(RegExPattern))){
+			
+	}else{
+	   ret+="El campo Correo Electrónico contiene información inválida"+"\n";
+	   HayError =true;
+	}
 	if(HayError==true){
 		 correo.style.background = 'Red';
 	}//fin del if

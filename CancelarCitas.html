@@ -14,7 +14,7 @@
 			<br />
 			<form id="fr">
 				<label>Seleccione un doctor</label>
-				<input type="text" id="doctoresCitaUs" list="doctores"  />
+				<input type="text" tabindex="1" id="doctoresCitaUs" list="doctores"  />
 				<datalist id="doctores">
 				  <option value="Internet Explorer">
 				  <option value="Firefox">
@@ -24,7 +24,7 @@
 				</datalist>
 				<br></br>
 				<label>Seleccione una fecha<label>
-				<input type="text" id="fechasCitasUs" list="fechas"  />
+				<input type="text" tabindex="2" id="fechasCitasUs" list="fechas"  />
 				<datalist id="fechas">
 				  <option value="Internet Explorer">
 				  <option value="Firefox">
@@ -34,7 +34,7 @@
 				</datalist>
 				<br></br>
 				<label>Seleccione una hora<label>
-				<input type="text" id="horasCitasUs" list="horas"  />
+				<input type="text" tabindex="3" id="horasCitasUs" list="horas"  />
 				<datalist id="horas">
 				  <option value="Internet Explorer">
 				  <option value="Firefox">
@@ -42,7 +42,7 @@
 				  <option value="Opera">
 				  <option value="Safari">
 				</datalist> 
-				<button type="button" id="cancelar_citas_button" onclick="validarCitasUsuario()"><B>Cancelar</B></button>
+				<button type="button" tabindex="4" id="cancelar_citas_button" onclick="validarCitasUsuario()"><B>Cancelar</B></button>
 			</form>
 		</section>
 

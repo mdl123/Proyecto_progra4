@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html>
 	<header>
 		<script src="ArchivosJS/Validaciones.js"></script>
@@ -14,14 +14,14 @@
 			<form id="fr">
 				<h4>Agregar Especialidades</h4>
 				<label>Nombre:</label>
-				<input type="text" id="NombreEspecialidadUs">
+				<input type="text" tabindex="1" id="NombreEspecialidadUs">
 				<br></br>
 				<label>Descripción:<label>
-				<input type="text" id="DescripcionUs">
-				<button type="button" id="agregar_especialidades_button" onclick="validarEspecialidadesUsuario()"><B>Agregar</B></button>
+				<input type="text" tabindex="2" id="DescripcionUs">
+				<button type="button" tabindex="3" id="agregar_especialidades_button" onclick="validarEspecialidadesUsuario()"><B>Agregar</B></button>
 		        <h4>Eliminar Especialidades</h4>
 			
-				<input type="text" id="especialidadesUs" list="especialidades"  />
+				<input type="text" tabindex="4" id="especialidadesUs" list="especialidades"  />
 				<datalist id="especialidades">
 				  <option value="Internet Explorer">
 				  <option value="Firefox">
@@ -29,7 +29,7 @@
 				  <option value="Opera">
 				  <option value="Safari">
 				</datalist> 
-				<button type="button" id="eliminar_especialidades_button" onclick="validarEliminarEspecialidadesUsuario()"><B>Eliminar</B></button>
+				<button type="button" tabindex="5" id="eliminar_especialidades_button" onclick="validarEliminarEspecialidadesUsuario()"><B>Eliminar</B></button>
 			</form>
 		</section>
 

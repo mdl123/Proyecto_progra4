@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html>
 	<header>
 		<script src="ArchivosJS/Validaciones.js"></script>
@@ -13,27 +13,27 @@
 		<section id="RegistrarCliente_section">
 		<h1>Creación de Cuenta</h1>
 		<br></br>
-			<form id="fr" name="fr1">
+			<form id="fr" name="fr1" tabindex="0">
 				<label>Número de Identidad:</label>
-				<input type="text" id="IdCliente" onkeypress="return entradaNumeros(event)" onpaste="return false">
+				<input type="text" tabindex="1" id="IdCliente" onkeypress="return entradaNumeros(event)" onpaste="return false">
 				<br></br>
 				<label>Nombre:<label>
-				<input type="text" id="NombreUsuario" onkeypress="return entradaLetras(event)" onpaste="return false">
+				<input type="text" tabindex="2" id="NombreUsuario" onkeypress="return entradaLetras(event)" onpaste="return false">
 				<label>Apellido:</label>
-				<input type="text" id="ApellidoUsuario" onkeypress="return entradaLetras(event)" onpaste="return false">
+				<input type="text" tabindex="3" id="ApellidoUsuario" onkeypress="return entradaLetras(event)" onpaste="return false">
 				<label>Direción:</label>
-				<input type="text" id="DirUsuario">
+				<input type="text" tabindex="4" id="DirUsuario">
 				<label>Edad:</label>
-				<input type="text" id="EdadUsuario" onkeypress="return entradaNumeros(event)" onpaste="return false">
+				<input type="text" tabindex="5" id="EdadUsuario" onkeypress="return entradaNumeros(event)" onpaste="return false">
 				<label>Teléfono:</label>
-				<input type="text" id="TelUsuario" onkeypress="return entradaNumeros(event)" onpaste="return false">
+				<input type="text" tabindex="6" id="TelUsuario" onkeypress="return entradaNumeros(event)" onpaste="return false">
 				<label>Correo electrónico:</label>
-				<input type="text" id="CorreoUsuario" >
+				<input type="text" tabindex="7" id="CorreoUsuario" >
 				<label>Nombre de Usuario:</label>
-				<input type="text" id="NomUsuario" onkeypress="return entradaCombinada(event)" onpaste="return false">
+				<input type="text" tabindex="8" id="NomUsuario" onkeypress="return entradaCombinada(event)" onpaste="return false">
 				<label>Contraseña:<label>
-				<input type="password" id="conUsuario" onkeypress="return entradaCombinada(event)" onpaste="return false">
-				<button type="button" id="RegistrarCliente_button" onclick="validarRegistroCliente()"><B>Registrarse</B></button>
+				<input type="password" tabindex="9" id="conUsuario" onkeypress="return entradaCombinada(event)" onpaste="return false">
+				<button type="button" tabindex="10" id="RegistrarCliente_button" onclick="validarRegistroCliente()"><B>Registrarse</B></button>
 			</form>
 		</section>
 		

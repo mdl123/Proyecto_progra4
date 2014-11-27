@@ -24,82 +24,6 @@ function validarRegistroCliente(){
 	
 }//fin de la funcion
 
-
-function validarReservarCitasCliente(){
-	if(document.getElementById("especialidadesCl").value=="" || document.getElementById("doctorCl").value==""
-	|| document.getElementById("fechaCl").value==""){
-		alert("Nungún campo de reservar puede estar vacío");
-	}else{
-		alert("Cita reservada correctamente");
-		limpiar(2);
-	}
-}//fin de la funcion
-
-function validarCancelarCitasCliente(){
-	if(document.getElementById("fechacitaCl").value==""){
-		alert("Nungún campo de cancelar puede estar vacío");
-	}else{
-		alert("Cita cancelada correctamente");
-		limpiar(3);
-	}
-}//fin de la funcion
-
-function validarEspecialidadesUsuario(){
-	if(document.getElementById("NombreEspecialidadUs").value=="" || document.getElementById("DescripcionUs").value==""){
-		alert("Nungún campo de agregar especialidad puede estar vacío");
-	}else{
-		alert("Especialidad agregada correctamente");
-		limpiar(4);
-	}
-}//fin de la funcion
-
-function validarEliminarEspecialidadesUsuario(){
-	if(document.getElementById("especialidadesUs").value=="" ){
-		alert("Nungún campo de eliminar especialidad puede estar vacío");
-	}else{
-		alert("Especialidad eliminada correctamente");
-		limpiar(5);
-		
-	}
-}//fin de la funcion
-
-function validaeDoctoresUsuario(){
-	if(document.getElementById("Id_Doctor").value=="" || document.getElementById("NombreDoctor").value==""
-	|| document.getElementById("ApellidoDoctor").value=="" || document.getElementById("especialidadesDoctorUs").value==""
-	|| document.getElementById("CelDoctor").value==""){
-		alert("Nungún campo de agregar doctor puede estar vacío");
-	}else{
-		var ret="";
-		ret += validarNumId("Id_Doctor")+"\n";
-		ret += validarTelefono("CelDoctor")+"\n";
-		if(ret!="\n\n"){
-			alert(ret);
-		}else{
-			alert("Doctor agregado correctamente");
-			limpiar(6);
-		}
-	}
-}//fin de la funcion
-
-function validarEliminarDoctoresUsuario(){
-	if(document.getElementById("doctoresUs").value=="" ){
-		alert("Nungún campo de eliminar doctor puede estar vacío");
-	}else{
-		alert("Doctor eliminado correctamente");
-		limpiar(7);
-	}
-}//fin de la funcion
-
-function validarCitasUsuario(){
-	if(document.getElementById("doctoresCitaUs").value=="" || document.getElementById("fechasCitasUs").value==""
-	|| document.getElementById("horasCitasUs").value==""){
-		alert("Nungún campo de cancelar cita puede estar vacío");
-	}else{
-		alert("Cita Cancelada correctamente");
-		limpiar(8);
-	}
-}//fin de la funcion
-
 function entradaNumeros(e){
 	var key=e.keyCode || e.which;
 	var teclado=String.fromCharCode(key);
@@ -214,7 +138,9 @@ function validarCorreo(){
 	}
 	if(HayError==true){
 		 correo.style.background = 'Red';
-	}//fin del if
+	}else{
+		correo.style.background = 'white'
+	}
 	return ret;
 
 }//fin de la funcion
@@ -238,39 +164,15 @@ function validarPassword(){
 }//fin de la funcion
 
 function limpiar(opcion){
-	if(opcion==1){
-		document.getElementById("IdCliente").value=""
-		document.getElementById("NombreUsuario").value=""
-		document.getElementById("ApellidoUsuario").value=""
-		document.getElementById("DirUsuario").value=""
-		document.getElementById("EdadUsuario").value=""
-		document.getElementById("TelUsuario").value=""
-		document.getElementById("CorreoUsuario").value=""
-		document.getElementById("NomUsuario").value=""
-		document.getElementById("conUsuario").value=""
-	}else if(opcion==2){
-		document.getElementById("especialidadesCl").value="" 
-		document.getElementById("doctorCl").value=""
-		document.getElementById("fechaCl").value=""
-	}else if(opcion==3){
-		document.getElementById("fechacitaCl").value=""
-	}else if(opcion==4){
-		document.getElementById("NombreEspecialidadUs").value=""
-		document.getElementById("DescripcionUs").value=""
-	}else if(opcion==5){
-		document.getElementById("especialidadesUs").value=""
-	}else if(opcion==6){
-		document.getElementById("Id_Doctor").value=""
-		document.getElementById("NombreDoctor").value=""
-		document.getElementById("ApellidoDoctor").value=""
-		document.getElementById("especialidadesDoctorUs").value=""
-		document.getElementById("CelDoctor").value=""
-	}else if(opcion==7){
-		document.getElementById("doctoresUs").value="" 
-	}else if(opcion==8){
-		document.getElementById("doctoresCitaUs").value=""
-		document.getElementById("fechasCitasUs").value=""
-		document.getElementById("horasCitasUs").value=""
-	}
+	document.getElementById("IdCliente").value=""
+	document.getElementById("NombreUsuario").value=""
+	document.getElementById("ApellidoUsuario").value=""
+	document.getElementById("DirUsuario").value=""
+	document.getElementById("EdadUsuario").value=""
+	document.getElementById("TelUsuario").value=""
+	document.getElementById("CorreoUsuario").value=""
+	document.getElementById("NomUsuario").value=""
+	document.getElementById("conUsuario").value=""
+	
 }
 

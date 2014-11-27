@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<script src="ArchivosJS/Validaciones.js"></script>
+		<script src="ArchivosJS/especialidadesusuariovalidaciones.js"></script>
 		<title>The Health Book</title>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" type="text/css" href="ArchivosCss/general.css">
@@ -14,7 +14,7 @@
 			<form id="fr">
 				<h4>Agregar Especialidades</h4>
 				<label>Nombre:</label>
-				<input type="text" tabindex="1" id="NombreEspecialidadUs">
+				<input type="text" tabindex="1" id="NombreEspecialidadUs" onkeypress="return entradaLetras(event)" onpaste="return false">
 				<br></br>
 				<label>Descripción:<label>
 				<input type="text" tabindex="2" id="DescripcionUs">

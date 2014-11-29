@@ -17,7 +17,16 @@ function validarRegistroCliente(){
 		if(ret!="\n\n\n\n\n"){
 			alert(ret);
 		}else{
-			alert("Información ingresada correctamente");
+			alert("todo va bien");
+			var url="ArchivosPhp/registrarcliente.php";
+			$.ajax({type:"POST", url:url,data: $("#fr").serialize(),
+				success: function(data)
+				{
+
+					var json=$.parseJSON(data);
+					$("#info").val(json.dato1);
+				}
+			});
 			limpiar(1);
 		}
 	}

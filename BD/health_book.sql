@@ -26,6 +26,9 @@ SET time_zone = "+00:00";
 -- Table structure for table `citas`
 --
 
+
+use health_book;
+
 CREATE TABLE IF NOT EXISTS `citas` (
 `id_cita` int(11) NOT NULL,
   `id_usuario` int(11) NOT NULL,

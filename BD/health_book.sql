@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS `doctores` (
   `id_especialidad` int(11) NOT NULL,
   `NombreDoctor` varchar(40) NOT NULL,
   `ApellidoDoctor` varchar(40) NOT NULL,
-  `CelularDoctor` varchar(40) NOT NULL
+  `CelularDoctor` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------

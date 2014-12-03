@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 26, 2014 at 12:45 AM
+-- Generation Time: Dec 03, 2014 at 05:35 AM
 -- Server version: 5.5.39
 -- PHP Version: 5.4.31
 
@@ -28,11 +28,11 @@ SET time_zone = "+00:00";
 
 CREATE DATABASE health_book;
 
-use health_book;
+USE health_book;
 
 CREATE TABLE IF NOT EXISTS `citas` (
 `id_cita` int(11) NOT NULL,
-  `id_usuario` int(11) NOT NULL,
+  `id_usuario` int(13) NOT NULL,
   `id_doctor` int(11) NOT NULL,
   `Fecha_cita` date NOT NULL,
   `CitaCancelada` enum('0,1') NOT NULL
@@ -71,7 +71,7 @@ CREATE TABLE IF NOT EXISTS `especialidades` (
 --
 
 CREATE TABLE IF NOT EXISTS `usuarios` (
-`id_usuario` int(11) NOT NULL,
+  `id_usuario` int(13) NOT NULL,
   `UserNames` varchar(15) NOT NULL,
   `UserPassword` varchar(15) NOT NULL,
   `NombreUsuario` varchar(40) NOT NULL,
@@ -81,7 +81,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `CorreoUsuario` varchar(50) NOT NULL,
   `DirrecionUsuario` varchar(100) NOT NULL,
   `EsAdmin` enum('0,1') NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Indexes for dumped tables
@@ -130,11 +130,6 @@ MODIFY `id_doctor` int(11) NOT NULL AUTO_INCREMENT;
 --
 ALTER TABLE `especialidades`
 MODIFY `id_especialidades` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `usuarios`
---
-ALTER TABLE `usuarios`
-MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- Constraints for dumped tables
 --

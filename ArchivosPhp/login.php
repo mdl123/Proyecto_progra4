@@ -25,6 +25,9 @@
 	}
 	if($contador!=0 && $contador2!=0){
 		header('Location: ../LoginPage.html');
+		//inicializando las variables de sesion
+		$_SESSION["usuario"]=$nombreUsuario;
+		$_SESSION["pass"]=$passUsuario;
 	}
 
 	if($contador==0 || $contador2==0){

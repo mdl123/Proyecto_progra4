@@ -2,3 +2,16 @@
 {
     height: 550px;
 }
+
+#info{
+	background-color:deepskyblue;
+	font-size:small;
+}
+
+button{
+	margin-left: 20%;
+}
+
+#limpiar{
+	margin-left: 1%;
+}

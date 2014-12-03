@@ -1,5 +1,6 @@
 ﻿
-function validarRegistroCliente(){
+$(function(){
+	$("#RegistrarCliente_button").click(function(){
 	if(document.getElementById("IdCliente").value=="" || document.getElementById("NombreUsuario").value==""
 	|| document.getElementById("ApellidoUsuario").value==""|| document.getElementById("DirUsuario").value==""
 	|| document.getElementById("EdadUsuario").value=="" || document.getElementById("TelUsuario").value==""
@@ -17,21 +18,20 @@ function validarRegistroCliente(){
 		if(ret!="\n\n\n\n\n"){
 			alert(ret);
 		}else{
-			alert("todo va bien");
-			var url="ArchivosPhp/registrarcliente.php";
+			var url="../ArchivosPhp/registrarcliente.php";
 			$.ajax({type:"POST", url:url,data: $("#fr").serialize(),
 				success: function(data)
 				{
-
-					var json=$.parseJSON(data);
-					$("#info").val(json.dato1);
+					$("#info").val(data);
 				}
 			});
 			limpiar(1);
 		}
 	}
-	
-}//fin de la funcion
+});
+
+});//fin de la funcion
+
 
 function entradaNumeros(e){
 	var key=e.keyCode || e.which;

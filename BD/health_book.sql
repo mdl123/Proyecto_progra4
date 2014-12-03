@@ -26,6 +26,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `citas`
 --
 
+CREATE DATABASE health_book;
 
 use health_book;
 

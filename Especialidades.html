@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 		<script src="ArchivosJS/especialidadesusuariovalidaciones.js"></script>
 		<title>The Health Book</title>
 		<meta charset="utf-8" />
@@ -11,13 +12,13 @@
 		<br /><br /><br /><br />
 		<section id="Especialidades_section">
 			<h1 >Especialidades</h1>
-			<form id="fr">
+			<form id="fr" method="post">
 				<h4>Agregar Especialidades</h4>
 				<label>Nombre:</label>
-				<input type="text" tabindex="1" id="NombreEspecialidadUs" onkeypress="return entradaLetras(event)" onpaste="return false">
+				<input type="text" tabindex="1" id="NombreEspecialidadUs" name="NameEspeciality" onkeypress="return entradaLetras(event)" onpaste="return false">
 				<br></br>
 				<label>Descripción:<label>
-				<input type="text" tabindex="2" id="DescripcionUs">
+				<input type="text" tabindex="2" id="DescripcionUs" name="DescEspeciality">
 				<button type="button" tabindex="3" id="agregar_especialidades_button" onclick="validarEspecialidadesUsuario()"><B>Agregar</B></button>
 		        <h4>Eliminar Especialidades</h4>
 			

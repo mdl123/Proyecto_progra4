@@ -1,8 +1,19 @@
+function() insertIntoDB{
+        var url= "../ArchivosPhp/especialidades.php";
+        $.ajax({type:"POST", url:url,data: $("#f").serialize(),
+            success: function(data)
+            {
+                alert("Especialidad agregada correctamente");
+            }
+        });
+        return false;
+}
+
 function validarEspecialidadesUsuario(){
 	if(document.getElementById("NombreEspecialidadUs").value=="" || document.getElementById("DescripcionUs").value==""){
 		alert("Nungún campo de agregar especialidad puede estar vacío");
 	}else{
-		alert("Especialidad agregada correctamente");
+        insertIntoDB();
 		limpiar(1);
 	}
 }//fin de la funcion
@@ -11,7 +22,7 @@ function validarEliminarEspecialidadesUsuario(){
 	if(document.getElementById("especialidadesUs").value=="" ){
 		alert("Nungún campo de eliminar especialidad puede estar vacío");
 	}else{
-		alert("Especialidad eliminada correctamente");
+		alert("Especialidad eliminada satisfactoriamente.");
 		limpiar(2);
 		
 	}

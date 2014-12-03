@@ -12,6 +12,15 @@
 		}else{
 			alert("Doctor agregado correctamente");
 			limpiar(1);
+			var url="ArchivosPhp/Login.php";
+			$.ajax({type:"POST", url:url,data: $("#fr").serialize(),
+				success: function(data)
+				{
+
+					var json=$.parseJSON(data);
+					$("#info").val(json.dato1);
+				}
+			});
 		}
 	}
 }//fin de la funcion

@@ -15,29 +15,25 @@
 		<h1>Creación de Cuenta</h1>
 		<br></br>
 			<form id="fr" name="fr1" method="post">
-			
-				<input type="text" id="info" readonly></label><br /><br />
 				<label>Número de Identidad:</label>
-				<input type="text" id="IdCliente" name="IdCliente" onkeypress="return entradaNumeros(event)" onpaste="return false">
-				<br></br>
+				<input type="text" id="IdCliente" name="IdCliente" onkeypress="return entradaNumeros(event)" onpaste="return false"/>
 				<label>Nombre:<label>
-				<input type="text"id="NombreUsuario" name="NombreUsuario" onkeypress="return entradaLetras(event)" onpaste="return false">
+				<input type="text"id="NombreUsuario" name="NombreUsuario" onkeypress="return entradaLetras(event)" onpaste="return false"/>
 				<label>Apellido:</label>
-				<input type="text" id="ApellidoUsuario" name="ApellidoUsuario" onkeypress="return entradaLetras(event)" onpaste="return false">
+				<input type="text" id="ApellidoUsuario" name="ApellidoUsuario" onkeypress="return entradaLetras(event)" onpaste="return false"/>
 				<label>Direción:</label>
-				<input type="text" id="DirUsuario" name="DirUsuario">
-				<label>Edad:</label>
-				<input type="text" id="EdadUsuario" name="EdadUsuario" onkeypress="return entradaNumeros(event)" onpaste="return false">
+				<input type="text" id="DirUsuario" name="DirUsuario"/>
+				<label>Fecha de Nacimiento: (aaaa-mm-dd)</label>
+				<input type="date" id="EdadUsuario" name="EdadUsuario" max="1910-12-31" min="1996-01-01" onkeypress="return entradaFecha(event)" onpaste="return false"/>
 				<label>Teléfono:</label>
-				<input type="text" id="TelUsuario" name="TelUsuario" onkeypress="return entradaNumeros(event)" onpaste="return false">
+				<input type="text" id="TelUsuario" name="TelUsuario" onkeypress="return entradaNumeros(event)" onpaste="return false"/>
 				<label>Correo electrónico:</label>
-				<input type="text"  id="CorreoUsuario" name="CorreoUsuario">
+				<input type="text"  id="CorreoUsuario" name="CorreoUsuario"/>
 				<label>Nombre de Usuario:</label>
-				<input type="text"  id="NomUsuario" name="NomUsuario" onkeypress="return entradaCombinada(event)" onpaste="return false">
+				<input type="text"  id="NomUsuario" name="NomUsuario" onkeypress="return entradaCombinada(event)" onpaste="return false"/>
 				<label>Contraseña:<label>
-				<input type="password" id="conUsuario" name="conUsuario" onkeypress="return entradaCombinada(event)" onpaste="return false">
+				<input type="password" id="conUsuario" name="conUsuario" onkeypress="return entradaCombinada(event)" onpaste="return false"/>
 				<button type="button"  id="RegistrarCliente_button"><B>Registrarse</B></button>
-				<button type="reset" id="limpiar"><B>Limpiar</B></reset>
 				
 			</form>
 		</section>

@@ -1,43 +1,36 @@
 <?php 
 	$conn=mysqli_connect('localhost','root','musica','health_book');
 	
-	if(mysqli_connect_errno($conn)){
-	}else{
-	}
-	
-	$idcliente = $_POST['id_usuario'];
+	$idcliente = $_POST['IdCliente'];
 	$nombre = $_POST['NombreUsuario'];
 	$apellido = $_POST['ApellidoUsuario'];
-	$direccion = $_POST['DirrecionUsuario'];
-	$edad = $_POST['FechaNacimiento'];
-	$tel = $_POST['TelefonoUsuario'];
+	$direccion = $_POST['DirUsuario'];
+	$edad = $_POST['EdadUsuario'];
+	$tel = $_POST['TelUsuario'];
 	$correo = $_POST['CorreoUsuario'];
-	$nombreusuario = $_POST['UserNames'];
-	$contrasena = $_POST['UserPassword'];
+	$nombreusuario = $_POST['NomUsuario'];
+	$contrasena = $_POST['conUsuario'];
 	
-	$query1 = "SELECT* FROM usuario WHERE id_usuario=$idcliente";
+	
+	$query1= "SELECT * FROM usuarios WHERE UserNames='$nombreusuario'";
 	$result1 = mysqli_query($conn,$query1);
-	$query2= "SELECT* FROM usuario WHERE UserNames=$nombreusuario";
-	$result2 = mysqli_query($conn,$query2);
 	
-	$contador=0;
-	$contador2=0;
-	while($row=mysqli_fetch_array($result1)){
-		$contador=$contador+1;
+	$rowcount1=mysqli_num_rows($result1);
+	$valores;
+	
+	if($rowcount1==0){
+		$query2 ="INSERT INTO usuarios (id_usuario,UserNames,UserPassword, NombreUsuario, ApellidoUsuario, FechaNacimiento,
+			  TelefonoUsuario, CorreoUsuario, DirrecionUsuario, EsAdmin) VALUES ('$idcliente','$nombreusuario',
+			  '$contrasena','$nombre','$apellido', '$edad', '$tel','$correo','$direccion','0')";
+		if (mysqli_query($conn, $query2)) {
+			$valores = array("dato1"=>"Usuario agregado correctamente");
+		} else {
+			$valores = array("dato1"=>"El número de identidad no esta disponible");
+		}
+	}else if($rowcount1>0){
+			$valores = array("dato1"=>"El número de usuario no esta disponible");
 	}
-	while($row=mysqli_fetch_array($result1)){
-		$contador2=$contador2+1;
-	}
-	if($contador==0 && $contador2==0){
-		echo "todocheque";
-	}else if($contador!=0 && $contador2!=0){
-		echo "El Número de Identidad y Nombre de usuario ya existen";
-	}else if($contador!=0){
-		echo "El Número de Identidad ya existe";
-	}else if($contador2!=0){
-		echo "El Nombre de Usuario ya existe";
-	}
+	echo json_encode($valores);
 	
 	
 ?> 
-		

@@ -1,17 +1,8 @@
 #RegistrarCliente_section
 {
-    height: 550px;
-}
-
-#info{
-	background-color:deepskyblue;
-	font-size:small;
+    height: 530px;
 }
 
 button{
-	margin-left: 20%;
-}
-
-#limpiar{
-	margin-left: 1%;
+	margin-left:35%;
 }

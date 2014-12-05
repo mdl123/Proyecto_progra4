@@ -22,11 +22,15 @@ $(function(){
 			$.ajax({type:"POST", url:url,data: $("#fr").serialize(),
 				success: function(data)
 				{
-					alert("dnsjd");
-					$('#info').val(data);
+					var json=$.parseJSON(data);
+					alert(json.dato1);
+					if(json.dato1=="Usuario agregado correctamente"){
+						alert("Ahora puedes entrar con tu usuario y contraseña");
+						document.location.href='../LoginPage.html';
+					}
 				}
 			});
-			limpiar(1);
+		
 		}
 	}
 });
@@ -65,6 +69,24 @@ function entradaLetras(e){
 		return false;
 	}
 }
+
+function entradaFecha(e){
+	var key=e.keyCode || e.which;
+	var teclado=String.fromCharCode(key);
+	var numeros="0123456789";
+	var letras="-"
+	var especiales="8-37-38-46-39";
+	var teclado_especial=false;
+    	for(var i in especiales){
+		if(key==especiales[i]){
+			teclado_especial=true;
+		}
+	}
+    	if(numeros.indexOf(teclado)==-1 && letras.indexOf(teclado)==-1  && !teclado_especial){
+		return false;
+	}
+}
+
 function entradaCombinada(e){
 	var key=e.keyCode || e.which;
 	var teclado=String.fromCharCode(key);
@@ -88,7 +110,7 @@ function validarNumId(campo){
 	var HayError=false;
 	console.log(num.value);
     if(num.value.length!=13){
-		ret+="El largo del Número de Identidad esta erróneo"+"\n";
+		ret+="El largo del Número de Identidad deber ser de 13 dígitos"+"\n";
 		HayError=true;
 	}//fin del if
     if(HayError==true){
@@ -104,10 +126,31 @@ function validarEdad(){
 	var edad=document.getElementById("EdadUsuario");
 	var ret="";
 	var HayError=false;
-	if(edad.value.length >2  || edad.value.length == 1){
-		ret+="La edad debe estar entre: [18-99] "+"\n";
+	if(edad.value.length !=10 || edad.value.charAt(4)!='-' || edad.value.charAt(7)!='-'){
+		ret+="Fecha de Nacimiento incorrecta"+"\n";
 		HayError=true;
-	}//fin del if
+	}else{
+		var unionaño = edad.value.charAt(0)+edad.value.charAt(1)+edad.value.charAt(2)+edad.value.charAt(3);
+		var año = parseInt(unionaño);
+		if(año>1996 || año<1910){
+			ret+="El rango del año es: 1910-1996 "+"\n";
+			HayError=true;
+		}
+		if(edad.value.charAt(5)!='0'){
+			var mes = parseInt(edad.value.charAt(5)+edad.value.charAt(6));
+			if(mes>12 || mes<10){
+				ret+="El rango del mes es: 01-12"+"\n";
+				HayError=true;
+			}
+		}
+		if(edad.value.charAt(8)!='0'){
+			var dia = parseInt(edad.value.charAt(8)+edad.value.charAt(9));
+			if(dia>31 || dia<10){
+				ret+="El rango del día es: 01-31"+"\n";
+				HayError=true;
+			}
+		}
+	}
     if(HayError==true){
 		edad.style.background = 'Red';
 	}else{
@@ -143,7 +186,7 @@ function validarCorreo(){
 	if((textoEntrada.match(RegExPattern))){
 			
 	}else{
-	   ret+="El campo Correo Electrónico contiene información inválida"+"\n";
+	   ret+="El campo Correo electrónico contiene información incorrecta"+"\n";
 	   HayError =true;
 	}
 	if(HayError==true){
@@ -162,7 +205,7 @@ function validarPassword(){
 	var password=document.getElementById("conUsuario");
 	var HayError=false;
 	if(password.value.length<8){
-		ret+="El campo Contraseña debe tener al menos 8 caracteres: letras o números"+"\n";
+		ret+="El campo contraseña debe tener al menos 8 caracteres: letras o números"+"\n";
 		HayError=true;
 	}//fin del if
 	if(HayError==true){

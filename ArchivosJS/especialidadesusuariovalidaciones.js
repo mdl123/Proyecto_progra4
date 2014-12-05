@@ -1,12 +1,12 @@
-function() insertIntoDB{
-        var url= "../ArchivosPhp/especialidades.php";
-        $.ajax({type:"POST", url:url,data: $("#f").serialize(),
+function insertIntoDB (){
+        var url= "./ArchivosPhp/especialidades.php";
+        $.ajax({type:"POST", url:url,data: $("#fr").serialize(),
             success: function(data)
             {
                 alert("Especialidad agregada correctamente");
+                console.log(data);
             }
         });
-        return false;
 }
 
 function validarEspecialidadesUsuario(){

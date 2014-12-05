@@ -22,7 +22,8 @@ $(function(){
 			$.ajax({type:"POST", url:url,data: $("#fr").serialize(),
 				success: function(data)
 				{
-					$("#info").val(data);
+					alert("dnsjd");
+					$('#info').val(data);
 				}
 			});
 			limpiar(1);

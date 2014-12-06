@@ -27,6 +27,11 @@ body{
 	margin:0 auto; 
 }
 
+#fr select {
+    width: 100%;
+    clear: both;
+	margin:0 auto; 
+}
 
 h4{
 	text-align: center;

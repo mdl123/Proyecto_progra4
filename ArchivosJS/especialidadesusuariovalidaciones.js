@@ -4,10 +4,38 @@ function insertIntoDB (){
             success: function(data)
             {
                 alert("Especialidad agregada correctamente");
+                fillComboBox();
+                //console.log(data);
+            }
+        });
+}
+
+function fillComboBox() {
+        var url= "./ArchivosPhp/especialidades2.php";
+        $.ajax({type:"POST", url:url,
+            success: function(data)
+            {
+                 $("#list-target").html(data);
+                //console.log(data);
+            }
+        });
+}
+
+function deleteEspeciality (){
+        var url= "./ArchivosPhp/especialidades3.php";
+        $.ajax({type:"POST", url:url,data: $("#fr").serialize(),
+            success: function(data)
+            {
+                alert("Especialidad eliminada satisfactoriamente.");
+                fillComboBox();
                 console.log(data);
             }
         });
 }
+
+$( document ).ready(function() {
+    fillComboBox();
+  });
 
 function validarEspecialidadesUsuario(){
 	if(document.getElementById("NombreEspecialidadUs").value=="" || document.getElementById("DescripcionUs").value==""){
@@ -19,12 +47,10 @@ function validarEspecialidadesUsuario(){
 }//fin de la funcion
 
 function validarEliminarEspecialidadesUsuario(){
-	if(document.getElementById("especialidadesUs").value=="" ){
+	if(document.getElementById("list-target").value=="" ){
 		alert("Nungún campo de eliminar especialidad puede estar vacío");
 	}else{
-		alert("Especialidad eliminada satisfactoriamente.");
-		limpiar(2);
-		
+        deleteEspeciality ();
 	}
 }//fin de la funcion
 
@@ -49,6 +75,6 @@ function limpiar(opcion){
 		document.getElementById("NombreEspecialidadUs").value=""
 		document.getElementById("DescripcionUs").value=""
 	}else if(opcion==2){
-		document.getElementById("especialidadesUs").value=""
+		document.getElementById("list-target").value=""
 	}
 }

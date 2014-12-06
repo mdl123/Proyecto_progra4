@@ -4,7 +4,7 @@ function fillComboBoxHoras() {
             success: function(data)
             {
                 $("#horasCitasUs").html(data);
-                //console.log(data);
+                console.log(data);
             }
         });
 }
@@ -35,7 +35,9 @@ function fillComboBox() {
 }
 
 function hacerCancelacion() {
-    var url= "./ArchivosPhp/cancelarcitas4.php";
+    var r = confirm("¿Desea realmente cancelar la cita?");
+    if (r == true) {
+      var url= "./ArchivosPhp/cancelarcitas4.php";
         $.ajax({type:"POST", url:url,data: $("#fr").serialize(),
             success: function(data)
             {
@@ -43,6 +45,9 @@ function hacerCancelacion() {
                 console.log(data);
             }
         });
+    } else {
+       alert("No se realizaron cambios.");
+    }
 }
 
 $( document ).ready(function() {

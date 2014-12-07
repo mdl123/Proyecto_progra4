@@ -32,5 +32,5 @@
 	}
 	echo json_encode($valores);
 	
-	
+	mysqli_close($conn);
 ?> 

@@ -35,6 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         //echo $nombreUsuario.$passUsuario;
         
         if ($nombreUsuario == "admin" && $passUsuario) {
+		session_start();
             $_SESSION["usuario"] = "admin";
             $_SESSION["pass"]    = "admin";
             echo '<script type="text/javascript">window.location.replace("./InicioAdministrador.html");</script>';
@@ -50,6 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             
             if ($result->num_rows > 0) {
                 //inicializando las variables de sesion
+		session_start();
                 $_SESSION["usuario"] = $nombreUsuario;
                 $_SESSION["pass"]    = $passUsuario;
                 

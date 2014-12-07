@@ -3,7 +3,7 @@
    $fecha = addslashes(htmlspecialchars($_POST["fechasCitasUs"]));
    $hora = addslashes(htmlspecialchars($_POST["horasCitasUs"]));
 
-   $enlace = mysqli_connect('localhost', 'root', '','health_book');
+   $enlace = mysqli_connect('localhost', 'citasmedicas', 'progra4','health_book');
    if($enlace){
      //echo "Conexion establecida satisfactoriamente, ";
      $Conn = "UPDATE citas SET CitaCancelada = '1' WHERE id_doctor = ";

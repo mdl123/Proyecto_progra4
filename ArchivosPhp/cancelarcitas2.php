@@ -1,7 +1,7 @@
 <?php
    $id = addslashes(htmlspecialchars($_POST["doctoresCitaUs"]));
 
-   $enlace = mysqli_connect('localhost', 'root', '','health_book');
+  $enlace = mysqli_connect('localhost', 'citasmedicas', 'progra4','health_book');
    if($enlace){
      //echo "Conexion establecida satisfactoriamente, ";
      $Conn = 'SELECT * FROM citas where id_doctor = ';

@@ -1,4 +1,4 @@
-﻿
+
 $(function(){
 	$("#RegistrarCliente_button").click(function(){
 	if(document.getElementById("IdCliente").value=="" || document.getElementById("NombreUsuario").value==""
@@ -18,7 +18,7 @@ $(function(){
 		if(ret!="\n\n\n\n\n"){
 			alert(ret);
 		}else{
-			var url="../ArchivosPhp/registrarcliente.php";
+			var url="./ArchivosPhp/registrarcliente.php";
 			$.ajax({type:"POST", url:url,data: $("#fr").serialize(),
 				success: function(data)
 				{
@@ -26,7 +26,7 @@ $(function(){
 					alert(json.dato1);
 					if(json.dato1=="Usuario agregado correctamente"){
 						alert("Ahora puedes entrar con tu usuario y contraseña");
-						document.location.href='../LoginPage.html';
+						document.location.href='LoginPage.php';
 					}
 				}
 			});

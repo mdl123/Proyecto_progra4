@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-    var url="../ArchivosPhp/iniciocliente.php";
+    var url="./ArchivosPhp/iniciocliente.php";
 	$.ajax({type:"POST", url:url,data: $("#fr").serialize(),
 		success: function(data)
 		{
@@ -13,7 +13,7 @@ $( document ).ready(function() {
 		
 		}
 	});
-	var url="../ArchivosPhp/iniciocliente5.php";
+	var url="./ArchivosPhp/iniciocliente5.php";
 	$.ajax({type:"POST", url:url,data: $("#fr").serialize(),
 		success: function(data)
 		{
@@ -32,7 +32,7 @@ $( document ).ready(function() {
 			}
 			while(json[$num]){
 				var partes = json[$num].split("^");
-				var partes2 = partes[1].split("  ");
+				var partes2 = partes[1].split("/");
 				var añocampo = parseInt(partes2[2].charAt(0)+partes2[2].charAt(1)+partes2[2].charAt(2)+partes2[2].charAt(3));
 				var mescampo;
 				var diacampo;
@@ -84,7 +84,7 @@ function cambiar(){
 		document.getElementById("horas").remove(0);
 	}
 	document.getElementById("fecha").value="";
-	var url="../ArchivosPhp/iniciocliente2.php";
+	var url="./ArchivosPhp/iniciocliente2.php";
 	$.ajax({type:"POST", url:url,data: $("#fr").serialize(),
 		success: function(data)
 		{
@@ -106,9 +106,12 @@ function cambiar(){
 }//fin de la fncion
 
 function nodoctores(){
-	if(document.getElementById("doctores").length==0 || document.getElementById("doctores").value=="no"){
+	if(document.getElementById("doctores").length==0){
 		$('#doctores').append('<option value="no">Debe seleccionar un doctor</option>');
 		document.getElementById("fecha").value="";
+	}else if(document.getElementById("doctores").value=="no"){
+		document.getElementById("fecha").value="";
+		
 	}
 }
 
@@ -158,7 +161,7 @@ function cambiar3(){
 			hayerror=true;
 		}
 		if(hayerror==false){
-			var url="../ArchivosPhp/iniciocliente3.php";
+			var url="./ArchivosPhp/iniciocliente3.php";
 			$.ajax({type:"POST", url:url,data: $("#fr").serialize(),
 				success: function(data)
 				{
@@ -196,8 +199,10 @@ function validarReservarCitasCliente(){
 	if(document.getElementById("especialidades").value=="" || document.getElementById("doctores").value=="no" || document.getElementById("doctores").value==""
 	|| document.getElementById("fecha").value=="" || document.getElementById("horas").value=="" || document.getElementById("horas").value=="no"){
 		alert("Nungún campo de reservar puede estar vacío");
+		formatofecha();
 	}else{
-		var url="../ArchivosPhp/iniciocliente4.php";
+		formatofecha();
+		var url="./ArchivosPhp/iniciocliente4.php";
 		$.ajax({type:"POST", url:url,data: $("#fr").serialize(),
 		success: function(data)
 			{
@@ -221,7 +226,7 @@ function validarCancelarCitasCliente(){
 	if(document.getElementById("citas").value==""){
 		alert("No hay citas que cancelar");
 	}else{
-		var url="../ArchivosPhp/iniciocliente6.php";
+		var url="./ArchivosPhp/iniciocliente6.php";
 		$.ajax({type:"POST", url:url,data: $("#fr").serialize(),
 			success: function(data)
 			{
@@ -232,7 +237,19 @@ function validarCancelarCitasCliente(){
 	}
 }//fin de la funcion
 
-
+function formatofecha(){
+	var hayerror=false;
+	var fecha = document.getElementById('fecha');
+	if(fecha.value.length!=10 || fecha.value.charAt(4)!='-' || fecha.value.charAt(7)!='-'){
+		alert("La fecha es incorrecta. Ingrese: aaaa-mm-dd");	
+		hayerror=true;
+	}
+	if(hayerror){
+		fecha.style.background ="red";
+	}else{
+		fecha.style.background ="white";
+	}
+}//fin de la funcion
 
 function entradaFecha(e){
 	var key=e.keyCode || e.which;

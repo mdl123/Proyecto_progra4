@@ -1,5 +1,5 @@
 <?php 
-	$conn=mysqli_connect('localhost','root','musica','health_book');
+	$conn=mysqli_connect('localhost','citasmedicas','progra4','health_book');
 	
 	$idcliente = $_POST['IdCliente'];
 	$nombre = $_POST['NombreUsuario'];

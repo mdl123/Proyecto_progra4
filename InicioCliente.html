@@ -1,7 +1,8 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<script src="ArchivosJS/inicioclientevalidaciones.js"></script>
+		<script type="text/javascript" src="ArchivosJS/jquery.js"></script>
+		<script type="text/javascript" src="ArchivosJS/inicioclientevalidaciones.js"></script>
 		<title>The Health Book</title>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" type="text/css" href="ArchivosCss/general.css">
@@ -14,51 +15,26 @@
 			<form id="fr">
 				<h4>Reservar Citas</h4>
 				<label>Seleccione una especialidad</label>
-				<input type="text" tabindex="1" id="especialidadesCl" list="especialidades"  />
-
-				<datalist id="especialidades">
-				  <option value="Internet Explorer">
-				  <option value="Firefox">
-				  <option value="Chrome">
-				  <option value="Opera">
-				  <option value="Safari">
-				</datalist> 
+				<select id="especialidades" name="especialidades" onchange="cambiar()">
+				</select>
 
 				<label>Seleccione un doctor</label>
-				<input type="text" tabindex="2" id="doctorCl" list="doctor"  />
-
-				<datalist id="doctor">
-				  <option value="Internet Explorer">
-				  <option value="Firefox">
-				  <option value="Chrome">
-				  <option value="Opera">
-				  <option value="Safari">
-				</datalist> 
-
-
-				<label>Seleccione una fecha</label>
-				<input type="text" tabindex="3" id="fechaCl" list="fecha"  />
-
-				<datalist id="fecha">
-				  <option value="Internet Explorer">
-				  <option value="Firefox">
-				  <option value="Chrome">
-				  <option value="Opera">
-				  <option value="Safari">
-				</datalist> 
-
-				<button type="button" tabindex="4" id="reservarcitas_button" onclick="validarReservarCitasCliente()"><B>Reservar Cita</B></button>
+				<select id="doctores" name="doctores" onchange="cambiar2()">
+				</select>
+				
+				<label>Ingrese una fecha: (aaaa-mm-dd)</label>
+				<input type="date" id="fecha" min="2014-06-12" max="2020-01-01" name="fecha" onkeydown="nodoctores()" onfocus="nodoctores()" onkeyup="cambiar3()"
+				onkeypress="return entradaFecha(event)" onpaste="return false"/>
+				
+				<label>Seleccione una hora</label>
+				<select id="horas" name="horas" >
+				</select>
+			
+				<button type="button" id="reservarcitas_button" onclick="validarReservarCitasCliente()"><B>Reservar Cita</B></button>
 				<h4>Cancelar Citas</h4>
-				<label>Seleccione una fecha</label>
-				<input type="text" tabindex="5" id="fechacitaCl" list="cita"  />
-
-				<datalist id="cita">
-				  <option value="Internet Explorer">
-				  <option value="Firefox">
-				  <option value="Chrome">
-				  <option value="Opera">
-				  <option value="Safari">
-				</datalist> 
+				<label>Seleccione la cita</label>
+				<select id="citas" name="citas">
+				</select>
 
 				<button type="button" id="cancelarcitas_button" onclick="validarCancelarCitasCliente()"><B>Cancelar Cita</B></button>
 

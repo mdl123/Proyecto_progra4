@@ -1,39 +1,40 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<script src="ArchivosJS/registrarclientevalidaciones.js"></script>
+		<script type="text/javascript" src="ArchivosJS/jquery.js"></script>
+		<script type="text/javascript" src="ArchivosJS/registrarclientevalidaciones.js"></script>
 		<title>Creación de cuenta</title>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" type="text/css" href="ArchivosCss/general.css">
-		<link rel="stylesheet" type="text/css" href="ArchivosCss/registrarcliente.css">
+		<link rel="stylesheet" type="text/css" href="ArchivosCss/RegistrarCliente.css">
 	</head>
 
 	<body>
 		<br /><br /><br /><br />
-		<section id="RegistrarCliente_section">
+		<section id="RegistrarCliente_section" >
 		<h1>Creación de Cuenta</h1>
 		<br></br>
-			<form id="fr" name="fr1" tabindex="0">
+			<form id="fr" name="fr1" method="post">
 				<label>Número de Identidad:</label>
-				<input type="text" tabindex="1" id="IdCliente" onkeypress="return entradaNumeros(event)" onpaste="return false">
-				<br></br>
+				<input type="text" id="IdCliente" name="IdCliente" onkeypress="return entradaNumeros(event)" onpaste="return false"/>
 				<label>Nombre:<label>
-				<input type="text" tabindex="2" id="NombreUsuario" onkeypress="return entradaLetras(event)" onpaste="return false">
+				<input type="text"id="NombreUsuario" name="NombreUsuario" onkeypress="return entradaLetras(event)" onpaste="return false"/>
 				<label>Apellido:</label>
-				<input type="text" tabindex="3" id="ApellidoUsuario" onkeypress="return entradaLetras(event)" onpaste="return false">
+				<input type="text" id="ApellidoUsuario" name="ApellidoUsuario" onkeypress="return entradaLetras(event)" onpaste="return false"/>
 				<label>Direción:</label>
-				<input type="text" tabindex="4" id="DirUsuario">
-				<label>Edad:</label>
-				<input type="text" tabindex="5" id="EdadUsuario" onkeypress="return entradaNumeros(event)" onpaste="return false">
+				<input type="text" id="DirUsuario" name="DirUsuario"/>
+				<label>Fecha de Nacimiento: (aaaa-mm-dd)</label>
+				<input type="date" id="EdadUsuario" name="EdadUsuario" max="1910-12-31" min="1996-01-01" onkeypress="return entradaFecha(event)" onpaste="return false"/>
 				<label>Teléfono:</label>
-				<input type="text" tabindex="6" id="TelUsuario" onkeypress="return entradaNumeros(event)" onpaste="return false">
+				<input type="text" id="TelUsuario" name="TelUsuario" onkeypress="return entradaNumeros(event)" onpaste="return false"/>
 				<label>Correo electrónico:</label>
-				<input type="text" tabindex="7" id="CorreoUsuario" >
+				<input type="text"  id="CorreoUsuario" name="CorreoUsuario"/>
 				<label>Nombre de Usuario:</label>
-				<input type="text" tabindex="8" id="NomUsuario" onkeypress="return entradaCombinada(event)" onpaste="return false">
+				<input type="text"  id="NomUsuario" name="NomUsuario" onkeypress="return entradaCombinada(event)" onpaste="return false"/>
 				<label>Contraseña:<label>
-				<input type="password" tabindex="9" id="conUsuario" onkeypress="return entradaCombinada(event)" onpaste="return false">
-				<button type="button" tabindex="10" id="RegistrarCliente_button" onclick="validarRegistroCliente()"><B>Registrarse</B></button>
+				<input type="password" id="conUsuario" name="conUsuario" onkeypress="return entradaCombinada(event)" onpaste="return false"/>
+				<button type="button"  id="RegistrarCliente_button"><B>Registrarse</B></button>
+				
 			</form>
 		</section>
 		

@@ -1,4 +1,8 @@
 #RegistrarCliente_section
 {
-    height: 550px;
+    height: 530px;
+}
+
+button{
+	margin-left:35%;
 }

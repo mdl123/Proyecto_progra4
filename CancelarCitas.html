@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
+        <script src="ArchivosJS/jquery.js"></script>
 		<script src="ArchivosJS/cancelarcitasusuariovalidaciones.js"></script>
 		<title>The Health Book</title>
 		<meta charset="utf-8" />
@@ -14,34 +15,13 @@
 			<br />
 			<form id="fr">
 				<label>Seleccione un doctor</label>
-				<input type="text" tabindex="1" id="doctoresCitaUs" list="doctores"  />
-				<datalist id="doctores">
-				  <option value="Internet Explorer">
-				  <option value="Firefox">
-				  <option value="Chrome">
-				  <option value="Opera">
-				  <option value="Safari">
-				</datalist>
+                <select tabindex="1" name="doctoresCitaUs" id="doctoresCitaUs" onchange="fillComboBoxFechas()"></select>
 				<br></br>
 				<label>Seleccione una fecha<label>
-				<input type="text" tabindex="2" id="fechasCitasUs" list="fechas"  />
-				<datalist id="fechas">
-				  <option value="Internet Explorer">
-				  <option value="Firefox">
-				  <option value="Chrome">
-				  <option value="Opera">
-				  <option value="Safari">
-				</datalist>
+                <select tabindex="2" name="fechasCitasUs" id="fechasCitasUs" onchange="fillComboBoxHoras()"></select>
 				<br></br>
 				<label>Seleccione una hora<label>
-				<input type="text" tabindex="3" id="horasCitasUs" list="horas"  />
-				<datalist id="horas">
-				  <option value="Internet Explorer">
-				  <option value="Firefox">
-				  <option value="Chrome">
-				  <option value="Opera">
-				  <option value="Safari">
-				</datalist> 
+                <select tabindex="2" name="horasCitasUs" id="horasCitasUs"></select>
 				<button type="button" tabindex="4" id="cancelar_citas_button" onclick="validarCitasUsuario()"><B>Cancelar</B></button>
 			</form>
 		</section>

@@ -19,7 +19,7 @@ $EspecialidadDoc = mysqli_real_escape_string($conn,$EspecialidadDoc);
 
 
 
-$sql = "Insert into doctores (id_especialidad,NombreDoctor,ApellidoDoctor,CelularDoctor) values($EspecialidadDoc,'$NombreDoc','$ApellidoDoc','$CelularDoc')";
+$sql = "Insert into doctores (id_especialidad, NombreDoctor, ApellidoDoctor, CelularDoctor) values($EspecialidadDoc,'$NombreDoc','$ApellidoDoc','$CelDoc')";
 
 if (mysqli_query($conn, $sql)) {
     echo "New record created successfully";

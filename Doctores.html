@@ -16,19 +16,19 @@
 				<form id="fr">
 					<h4>Agregar Doctores</h4>
 					<label>Número de Identidad:</label>
-					<input type="text" tabindex="1" id="Id_Doctor" onkeypress="return entradaNumeros(event)" onpaste="return false">
+					<input type="text" tabindex="1" id="Id_Doctor" name="Id_Doctor" onkeypress="return entradaNumeros(event)" onpaste="return false">
 					<br></br>
 					<label>Nombre:<label>
-					<input type="text" tabindex="2" id="NombreDoctor" onkeypress="return entradaLetras(event)" onpaste="return false">
+					<input type="text" tabindex="2" id="NombreDoctor" name="NombreDoctor" onkeypress="return entradaLetras(event)" onpaste="return false">
 					<br></br>
 					<label>Apellido:<label>
-					<input type="text" tabindex="3" id="ApellidoDoctor" onkeypress="return entradaLetras(event)" onpaste="return false">
+					<input type="text" tabindex="3" id="ApellidoDoctor" name="ApellidoDoctor" onkeypress="return entradaLetras(event)" onpaste="return false">
 					<br></br>
 					<label>Seleccione una especialidad</label>
 					<select id="list" name="list"></select>
 					<br></br>
 					<label>Cel:<label>
-					<input type="text" tabindex="5" id="CelDoctor" onkeypress="return entradaNumeros(event)" onpaste="return false">
+					<input type="text" tabindex="5" id="CelDoctor" name="CelDoctor" onkeypress="return entradaNumeros(event)" onpaste="return false">
 					<button type="button" tabindex="6" id="agregar_doctores_button" onclick="validarDoctoresUsuario()"><B>Agregar</B></button>
 					<h4>Eliminar Doctores</h4>
 					<select id="list2" name="list2"></select>

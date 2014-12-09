@@ -14,11 +14,11 @@ $msg = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["nomUsuario"])) {
         
-        $msg = "Ningun campo puede ir vacio";
+        $msg = "Ningún campo puede ir vacio";
     } //fin del if de validar nombre    
     if (empty($_POST["conUsuario"])) {
         
-        $msg = "Ningun campo puede ir vacio";
+        $msg = "Ningún campo puede ir vacio";
     } //fin del if de validar password
     if ($msg != "") {
         echo '<script type="text/javascript">alert("' . $msg . '")</script>';

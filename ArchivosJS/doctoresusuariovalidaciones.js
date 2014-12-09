@@ -1,56 +1,87 @@
-﻿function validarDoctoresUsuario(){
+﻿function insertIntoDB (){
+        var url= "./ArchivosPhp/DocInsertar.php";
+        $.ajax({type:"POST", url:url,data: $("#fr").serialize(),
+            success: function(data)
+            {
+                alert("Especialidad agregada correctamente");
+                fillComboBox();
+                console.log(data);
+            }
+        });
+}
+
+
+
+
+function fillComboBox2() {
+        var url= "./ArchivosPhp/EspecLLenar.php";
+        $.ajax({type:"POST", url:url,
+            success: function(data)
+            {
+                 $("#list").html(data);
+                //console.log(data);
+            }
+        });
+}
+
+
+
+function fillComboBox() {
+        var url= "./ArchivosPhp/DocLLenar.php";
+        $.ajax({type:"POST", url:url,
+            success: function(data)
+            {
+                 $("#list2").html(data);
+                //console.log(data);
+            }
+        });
+}
+
+function deleteDoc(){
+        var url= "./ArchivosPhp/DocBorrar.php";
+        $.ajax({type:"POST", url:url,data: $("#fr").serialize(),
+            success: function(data)
+            {
+                alert("Especialidad eliminada satisfactoriamente.");
+                fillComboBox();
+                console.log(data);
+            }
+        });
+}
+
+$( document ).ready(function() {
+	fillComboBox2();
+    fillComboBox();
+    
+  });
+
+function validarDoctoresUsuario(){
 	if(document.getElementById("Id_Doctor").value=="" || document.getElementById("NombreDoctor").value==""
-	|| document.getElementById("ApellidoDoctor").value=="" || document.getElementById("especialidadesDoctorUs").value==""
+	|| document.getElementById("ApellidoDoctor").value=="" || document.getElementById("list").value==""
 	|| document.getElementById("CelDoctor").value==""){
 		alert("Nungún campo de agregar doctor puede estar vacío");
-	}else{
+	}
+	else{
 		var ret="";
 		ret += validarNumId("Id_Doctor")+"\n";
 		ret += validarTelefono("CelDoctor")+"\n";
 		if(ret!="\n\n"){
 			alert(ret);
 		}else{
-			alert("Doctor agregado correctamente");
-			limpiar(1);
-			var url="ArchivosPhp/Login.php";
-			$.ajax({type:"POST", url:url,data: $("#fr").serialize(),
-				success: function(data)
-				{
-
-					var json=$.parseJSON(data);
-					$("#info").val(json.dato1);
-				}
-			});
+        insertIntoDB();
+		limpiar(1);
 		}
-	}
+	}//fin del else grande
+		
 }//fin de la funcion
 
 function validarEliminarDoctoresUsuario(){
-	if(document.getElementById("doctoresUs").value=="" ){
-		alert("Nungún campo de eliminar doctor puede estar vacío");
+	if(document.getElementById("list2").value=="" ){
+		alert("Nungún campo de eliminar especialidad puede estar vacío");
 	}else{
-		alert("Doctor eliminado correctamente");
-		limpiar(2);
+        deleteDoc();
 	}
 }//fin de la funcion
-
-function entradaNumeros(e){
-	var key=e.keyCode || e.which;
-	var teclado=String.fromCharCode(key);
-	var numeros="0123456789";
-	var especiales="8-37-38-46-39";
-	var teclado_especial=false;
-    for(var i in especiales){
-		if(key==especiales[i]){
-		
-			teclado_especial=true;
-		}
-	}
-    if(numeros.indexOf(teclado)==-1 && !teclado_especial){
-		return false;
-	}
-} 
-
 
 function entradaLetras(e){
 	var key=e.keyCode || e.which;
@@ -109,9 +140,27 @@ function limpiar(opcion){
 		document.getElementById("Id_Doctor").value=""
 		document.getElementById("NombreDoctor").value=""
 		document.getElementById("ApellidoDoctor").value=""
-		document.getElementById("especialidadesDoctorUs").value=""
 		document.getElementById("CelDoctor").value=""
 	}else if(opcion==2){
 		document.getElementById("doctoresUs").value="" 
 	}
 }
+
+
+
+function entradaNumeros(e){
+	var key=e.keyCode || e.which;
+	var teclado=String.fromCharCode(key);
+	var numeros="0123456789";
+	var especiales="8-37-38-46-39";
+	var teclado_especial=false;
+    for(var i in especiales){
+		if(key==especiales[i]){
+			teclado_especial=true;
+		}
+	}
+    if(numeros.indexOf(teclado)==-1 && !teclado_especial){
+		return false;
+	}
+} 
+

@@ -1,6 +1,7 @@
-<!DOCTYPE HTML>
+﻿<!DOCTYPE HTML>
 <html>
 	<head>
+		<script src="ArchivosJS/jquery.js"></script>
 		<script src="ArchivosJS/doctoresusuariovalidaciones.js"></script>
 		<title>The Health Book</title>
 		<meta charset="utf-8" />
@@ -24,28 +25,13 @@
 					<input type="text" tabindex="3" id="ApellidoDoctor" onkeypress="return entradaLetras(event)" onpaste="return false">
 					<br></br>
 					<label>Seleccione una especialidad</label>
-					<input type="text" tabindex="4" id="especialidadesDoctorUs" list="especialidades"  />
-
-					<datalist id="especialidades">
-					  <option value="Internet Explorer">
-					  <option value="Firefox">
-					  <option value="Chrome">
-					  <option value="Opera">
-					  <option value="Safari">
-					</datalist> 
+					<select id="list" name="list"></select>
 					<br></br>
 					<label>Cel:<label>
 					<input type="text" tabindex="5" id="CelDoctor" onkeypress="return entradaNumeros(event)" onpaste="return false">
 					<button type="button" tabindex="6" id="agregar_doctores_button" onclick="validarDoctoresUsuario()"><B>Agregar</B></button>
 					<h4>Eliminar Doctores</h4>
-					<input type="text" tabindex="7" id="doctoresUs" list="doctores"/>
-					<datalist id="doctores">
-					  <option value="Internet Explorer">
-					  <option value="Firefox">
-					  <option value="Chrome">
-					  <option value="Opera">
-					  <option value="Safari">
-					</datalist> 
+					<select id="list2" name="list2"></select>
 					<button type="button" id="eliminar_doctores_button" tabindex="8" onclick="validarEliminarDoctoresUsuario()"><B>Eliminar</B></button>
 			</form>
 

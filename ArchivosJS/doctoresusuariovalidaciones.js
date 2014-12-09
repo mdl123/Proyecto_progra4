@@ -1,9 +1,9 @@
-﻿function insertIntoDB (){
+function insertIntoDB (){
         var url= "./ArchivosPhp/DocInsertar.php";
         $.ajax({type:"POST", url:url,data: $("#fr").serialize(),
             success: function(data)
             {
-                alert("Especialidad agregada correctamente");
+                alert("Doctor agregado correctamente");
                 fillComboBox();
                 console.log(data);
             }
@@ -42,7 +42,7 @@ function deleteDoc(){
         $.ajax({type:"POST", url:url,data: $("#fr").serialize(),
             success: function(data)
             {
-                alert("Especialidad eliminada satisfactoriamente.");
+                alert("Doctor eliminado satisfactoriamente.");
                 fillComboBox();
                 console.log(data);
             }
@@ -51,9 +51,9 @@ function deleteDoc(){
 
 $( document ).ready(function() {
 	fillComboBox2();
-    fillComboBox();
+    	fillComboBox();
     
-  });
+});
 
 function validarDoctoresUsuario(){
 	if(document.getElementById("Id_Doctor").value=="" || document.getElementById("NombreDoctor").value==""
@@ -68,8 +68,8 @@ function validarDoctoresUsuario(){
 		if(ret!="\n\n"){
 			alert(ret);
 		}else{
-        insertIntoDB();
-		limpiar(1);
+        		insertIntoDB();
+			limpiar(1);
 		}
 	}//fin del else grande
 		
@@ -77,9 +77,9 @@ function validarDoctoresUsuario(){
 
 function validarEliminarDoctoresUsuario(){
 	if(document.getElementById("list2").value=="" ){
-		alert("Nungún campo de eliminar especialidad puede estar vacío");
+		alert("Nungún campo de eliminar doctor puede estar vacío");
 	}else{
-        deleteDoc();
+        	deleteDoc();
 	}
 }//fin de la funcion
 
@@ -107,7 +107,7 @@ function validarNumId(campo){
 	var HayError=false;
 	console.log(num.value);
     if(num.value.length!=13){
-		ret+="El largo del Número de Identidad esta erróneo"+"\n";
+		ret+="El Número de Identidad debe tener 13 dígitos"+"\n";
 		HayError=true;
 	}//fin del if
     if(HayError==true){

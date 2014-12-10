@@ -43,8 +43,9 @@ button{
 }
 
 
-a{
-font-size: 34px;
-margin-left:80%;
+#registrarse{
+	font-size: 34px;
+	margin-left:80%;
+	text-decoration: none;
 
 }

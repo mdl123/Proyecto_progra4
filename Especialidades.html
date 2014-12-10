@@ -6,6 +6,7 @@
 		<title>The Health Book</title>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" type="text/css" href="ArchivosCss/general.css">
+		<link rel="stylesheet" type="text/css" href="ArchivosCss/Especialidades.css">
 	</head>
 
 	<body>
@@ -16,7 +17,6 @@
 				<h4>Agregar Especialidades</h4>
 				<label>Nombre:</label>
 				<input type="text" tabindex="1" id="NombreEspecialidadUs" name="NameEspeciality" onkeypress="return entradaLetras(event)" onpaste="return false">
-				<br></br>
 				<label>Descripción:<label>
 				<input type="text" tabindex="2" id="DescripcionUs" name="DescEspeciality">
 				<button type="button" tabindex="3" id="agregar_especialidades_button" onclick="validarEspecialidadesUsuario()"><B>Agregar</B></button>
@@ -25,6 +25,11 @@
 				<button type="button" tabindex="5" id="eliminar_especialidades_button" onclick="validarEliminarEspecialidadesUsuario()"><B>Eliminar</B></button>
 			</form>
 		</section>
+		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+		<div id="salir">
+			<a href="LoginPage.html"><B>Salir</B></a>
+		</div>
+			
 
 	</body>
 

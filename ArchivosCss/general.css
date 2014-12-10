@@ -56,3 +56,18 @@ label{
 	font-family: "Times New Roman", Times, serif;
 	font-size: 14px;
 }
+
+#salir{
+	display: inline-black;
+	cursor: pointer;
+	color: white;
+	margin-left:95%;
+
+}
+
+a{
+	font-family: "Times New Roman", Times, serif;
+	color: black;
+	text-decoration: none;
+}
+

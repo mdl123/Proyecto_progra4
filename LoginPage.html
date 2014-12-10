@@ -1,8 +1,10 @@
-<!DOCTYPE HTML>
+﻿<!DOCTYPE HTML>
 <html>
+	
 	<head>
 		<title>The Health Book</title>
 		<meta charset="utf-8" />
+		<script src="ArchivosJS/validacionesLogin.js"></script>
 		<link rel="stylesheet" type="text/css" href="ArchivosCss/general.css">
 		<link rel="stylesheet" type="text/css" href="ArchivosCss/login.css">
 	</head>
@@ -16,15 +18,15 @@
 			<div>
 				<form id="fr">
 					<label>Nombre de usuario</label>
-					<input type="text" tabindex="1" name="nomUsuario">
+					<input type="text" tabindex="1" id="nomUsuario">
 					<br></br>
 					<label>Contraseña<label>
-					<input type="password" tabindex="2" name="conUsuario">
-					<button type="button" tabindex="3" id="login_button"> Login </button>
+					<input type="password" tabindex="2" id="conUsuario">
+					<button type="button" tabindex="3" id="login_button" onclick="execute()"> Login </button>
 				</form>
 			</div>
 		</section>
-
+		<a href="RegistrarCliente.html"><B>Registrarse</B></a>
 	</body>
 
 
